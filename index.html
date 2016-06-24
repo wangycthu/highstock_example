@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta author="LeeTZ">
     <title>Hightchart Example</title>
-
     <!-- Bootstrap core CSS -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles -->
     <link href="css/style.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
   <body>
@@ -26,48 +25,49 @@
           <br>
           <!-- Search Button Begin-->
           <div class="row placeholders">
-              <div class="col-lg-6">
-                <div class="input-group">
-                  <span class="input-group-addon">#ID:</span>
-                  <input type="text" id="query" class="form-control" placeholder="Input a number to fake data...">
-                  <span class="input-group-btn">
-                    <button class="btn btn-default" type="button" onclick="search()">Go!</button>
-                  </span>
-                </div>
+            <div class="col-lg-6">
+              <div class="input-group">
+                <span class="input-group-addon">#ID:</span>
+                <input type="text" id="query" class="form-control" placeholder="Input a number to fake data...">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button" onclick="search()">Go!</button>
+                </span>
               </div>
+            </div>
           </div>
           <!-- Search Button End-->
           <!-- Table Begin-->
-          <h3 class="sub-header">Product Description</h3>
-          <p>Here shows the search result in table. Eros constituto nam at. His probatus repudiandae ad. Ius aperiri percipit concludaturque ut, et mundi omittantur nec. Vel ne graeco antiopam repudiandae, at mea unum munere integre. Nec corpora posidonium ea, in suas doming oportere his. Id has percipitur sadipscing.</p>
-
-          <div class="table-responsive">
-            <table class="table table-striped" id="tabledata">
-              <thead>
-                <tr>
-                  <th class="left-divisor">Header</th>
-                  <th class="right-divisor">Header</th>
-                  <th>Header</th>
-                  <th class="right-divisor">Header</th>
-                  <th>Header</th>
-                  <th class="right-divisor">Header</th>
-                  <th>Header</th>
-                  <th class="right-divisor">Header</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="left-divisor">1,001</td>
-                  <td class="right-divisor">Lorem</td>
-                  <td>ipsum</td>
-                  <td class="right-divisor">dolor</td>
-                  <td>sit</td>
-                  <td class="right-divisor">sit</td>
-                  <td>elit</td>
-                  <td class="right-divisor">sit</td>
-                </tr>
-              </tbody>
-            </table>
+          <div id="table-wrapper" style="display: none">
+            <h3 class="sub-header">Product Description</h3>
+            <p>Here shows the search result in table. Eros constituto nam at. His probatus repudiandae ad. Ius aperiri percipit concludaturque ut, et mundi omittantur nec. Vel ne graeco antiopam repudiandae, at mea unum munere integre. Nec corpora posidonium ea, in suas doming oportere his. Id has percipitur sadipscing.</p>
+            <div class="table-responsive">
+              <table class="table table-striped" id="tabledata">
+                <thead>
+                  <tr>
+                    <th class="left-divisor">Header</th>
+                    <th class="right-divisor">Header</th>
+                    <th>Header</th>
+                    <th class="right-divisor">Header</th>
+                    <th>Header</th>
+                    <th class="right-divisor">Header</th>
+                    <th>Header</th>
+                    <th class="right-divisor">Header</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="left-divisor">1,001</td>
+                    <td class="right-divisor">Lorem</td>
+                    <td>ipsum</td>
+                    <td class="right-divisor">dolor</td>
+                    <td>sit</td>
+                    <td class="right-divisor">sit</td>
+                    <td>elit</td>
+                    <td class="right-divisor">sit</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
           <!-- Table End-->
           <br>
@@ -77,10 +77,9 @@
         </div>
       </div>
       <footer>
-            <p>&copy; Yichen Wang 2016</p>
-          </footer>
+        <p>&copy; Yichen Wang 2016</p>
+      </footer>
     </div>
-
     <!-- Bootstrap core JavaScript Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>

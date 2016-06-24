@@ -26,6 +26,7 @@ function search(){
         });
         tbody.append(tr);
     });
+    $("#table-wrapper").show();
     // then update the chart with data
 
     $('#high-chart').highcharts('StockChart', {
@@ -155,88 +156,5 @@ function fakedata(query){
 
 // this function is executed when document is ready, only for a quick view
 $(function () {
-        $('#high-chart').highcharts('StockChart', {
-            chart: {
-                zoomType: 'xy'
-            },
-            
-            title: {
-                text: 'My Fancy Chart'
-            },
-            subtitle: {
-                text: 'This is a subtitle'
-            },
-
-            rangeSelector : {
-                selected : 1
-            },
-            
-            yAxis: [{ // Primary yAxis
-                labels: {
-                    format: '{value}%',
-                    style: {
-                        color: Highcharts.getOptions().colors[1]
-                    }
-                },
-                title: {
-                    text: 'Unit one',
-                    style: {
-                        color: Highcharts.getOptions().colors[1]
-                    }
-                },
-                opposite: false
-            }, { // Secondary yAxis
-                labels: {
-                    format: '{value} mm',
-                    style: {
-                        color: Highcharts.getOptions().colors[0]
-                    }
-                },
-                title: {
-                    text: 'Unit two',
-                    style: {
-                        color: Highcharts.getOptions().colors[0]
-                    }
-                }
-                
-            }],
-            plotOptions:{
-                spline:{
-                    pointStart: Date.UTC(2016, 6, 23, 0, 0, 0),
-                    pointInterval: 86400000 // one day
-                },
-                column:{
-                    pointStart: Date.UTC(2016, 6, 23, 0, 0, 0),
-                    pointInterval: 86400000, // one day
-                }
-            },
-            series : [{
-                name : 'Unit two',
-                data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
-                yAxis: 1,
-                type: 'column',
-                tooltip: {
-                    valueDecimals: 2,
-                    valueSuffix: ' mm'
-                }
-            },{
-                name : 'Unit two',
-                data: [59.9, 111.5, 136.4, 219.2, 114.0, 136.0, 15.6, 481.5, 216.4, 194.1, 95.6, 54.4],
-                yAxis: 1,
-                type: 'column',
-                tooltip: {
-                    valueDecimals: 2,
-                    valueSuffix: ' mm'
-                }
-            },  // double stack
-            {
-                name : 'Unit one',
-                data: [17.0, 6.9, 19.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
-                type: 'spline',
-                tooltip: {
-                    valueDecimals: 2,
-                    valueSuffix: '%'
-                }
-            }]
-        });
+    $("#table-wrapper").hide();
 });
