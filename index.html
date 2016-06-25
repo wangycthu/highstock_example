@@ -19,6 +19,7 @@
   <body>
     <div class="container-fluid">
       <div class="row">
+        <div class="col-md-1"></div>
         <div class="col-md-10 main">
           <h1 class="page-header">Toolname</h1>
           <p>This is an awesome tool. Lorem ipsum dolor sit amet, id utinam consul causae duo. Eum mucius electram periculis no, eam falli sensibus id, ne his iuvaret nominavi suscipiantur. Ea accusamus assueverit liberavisse est, ad dicant reformidans mea. At lorem laoreet consulatu pro. Per at possit latine, in est gloriatur expetendis, et nulla sententiae mel.</p>
@@ -30,7 +31,7 @@
                 <span class="input-group-addon">#ID:</span>
                 <input type="text" id="query" class="form-control" placeholder="Input a number to fake data...">
                 <span class="input-group-btn">
-                  <button class="btn btn-default" type="button" onclick="search()">Go!</button>
+                  <button class="btn btn-default" type="button" onclick="search()">Search</button>
                 </span>
               </div>
             </div>
@@ -38,33 +39,24 @@
           <!-- Search Button End-->
           <!-- Table Begin-->
           <div id="table-wrapper" style="display: none">
-            <h3 class="sub-header">Product Description</h3>
+            <h3 class="sub-header">Product Name</h3>
             <p>Here shows the search result in table. Eros constituto nam at. His probatus repudiandae ad. Ius aperiri percipit concludaturque ut, et mundi omittantur nec. Vel ne graeco antiopam repudiandae, at mea unum munere integre. Nec corpora posidonium ea, in suas doming oportere his. Id has percipitur sadipscing.</p>
+            <br>
             <div class="table-responsive">
               <table class="table table-striped" id="tabledata">
                 <thead>
                   <tr>
-                    <th class="left-divisor">Header</th>
-                    <th class="right-divisor">Header</th>
-                    <th>Header</th>
-                    <th class="right-divisor">Header</th>
-                    <th>Header</th>
-                    <th class="right-divisor">Header</th>
-                    <th>Header</th>
-                    <th class="right-divisor">Header</th>
+                    <th class="left-divisor">Attribute</th>
+                    <th class="right-divisor">Value</th>
+                    <th>Attribute</th>
+                    <th class="right-divisor">Value</th>
+                    <th>Attribute</th>
+                    <th class="right-divisor">Value</th>
+                    <th>Attribute</th>
+                    <th class="right-divisor">Value</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td class="left-divisor">1,001</td>
-                    <td class="right-divisor">Lorem</td>
-                    <td>ipsum</td>
-                    <td class="right-divisor">dolor</td>
-                    <td>sit</td>
-                    <td class="right-divisor">sit</td>
-                    <td>elit</td>
-                    <td class="right-divisor">sit</td>
-                  </tr>
+                <tbody>              
                 </tbody>
               </table>
             </div>
@@ -75,6 +67,7 @@
           <div id="high-chart"></div>
           <!-- Hight Charts End-->
         </div>
+        <div class="col-md-1"></div>
       </div>
       <footer>
         <p>&copy; Yichen Wang 2016</p>
