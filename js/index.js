@@ -3,6 +3,8 @@
 function search() {
     // get text from the input box, you should pass this to your api call for data
     query = $("#query").val();
+    if (query == "")
+        query = "8";
 
     // this is a mock of your API call, you should change this to your own api call
     mydata = fakedata(query);
@@ -79,21 +81,29 @@ function search() {
 
         }],
         plotOptions: {
-            // xAxis info, you may need to change this
             spline: {
-                pointStart: Date.UTC(2016, 6, 23, 0, 0, 0),
+                pointStart: Date.UTC(2015, 6, 23, 0, 0, 0),
                 pointInterval: 864000000 // ten days
             },
             column: {
-                pointStart: Date.UTC(2016, 6, 23, 0, 0, 0),
+                pointStart: Date.UTC(2015, 6, 23, 0, 0, 0),
                 pointInterval: 864000000, // ten days
             }
         },
-        series: [{
+        series: [{ // double stack
+                name: 'Unit one',
+                data: mydata["unit1"],
+                type: 'spline',
+                tooltip: {
+                    valueDecimals: 2,
+                    valueSuffix: '%'
+                }
+            }, {
                 name: 'Unit two',
                 data: mydata["unit2_1"],
                 yAxis: 1,
                 type: 'column',
+                color: 'orange',
                 tooltip: {
                     valueDecimals: 2,
                     valueSuffix: ' m'
@@ -103,18 +113,10 @@ function search() {
                 data: mydata["unit2_2"],
                 yAxis: 1,
                 type: 'column',
+                color: 'green',
                 tooltip: {
                     valueDecimals: 2,
                     valueSuffix: ' m'
-                }
-            }, // double stack
-            {
-                name: 'Unit one',
-                data: mydata["unit1"],
-                type: 'spline',
-                tooltip: {
-                    valueDecimals: 2,
-                    valueSuffix: '%'
                 }
             }
         ]
@@ -172,4 +174,5 @@ function fakedata(query) {
 // this function is executed when document is ready, only for a quick view
 $(function() {
     $("#table-wrapper").hide();
+    search();
 });
