@@ -91,35 +91,34 @@ function search() {
             }
         },
         series: [{ // double stack
-                name: 'Unit one',
-                data: mydata["unit1"],
-                type: 'spline',
-                tooltip: {
-                    valueDecimals: 2,
-                    valueSuffix: '%'
-                }
-            }, {
-                name: 'Unit two',
-                data: mydata["unit2_1"],
-                yAxis: 1,
-                type: 'column',
-                color: 'orange',
-                tooltip: {
-                    valueDecimals: 2,
-                    valueSuffix: ' m'
-                }
-            }, {
-                name: 'Unit two',
-                data: mydata["unit2_2"],
-                yAxis: 1,
-                type: 'column',
-                color: 'green',
-                tooltip: {
-                    valueDecimals: 2,
-                    valueSuffix: ' m'
-                }
+            name: 'Unit one',
+            data: mydata["unit1"],
+            type: 'spline',
+            tooltip: {
+                valueDecimals: 2,
+                valueSuffix: '%'
             }
-        ]
+        }, {
+            name: 'Unit two',
+            data: mydata["unit2_1"],
+            yAxis: 1,
+            type: 'column',
+            color: 'orange',
+            tooltip: {
+                valueDecimals: 2,
+                valueSuffix: ' m'
+            }
+        }, {
+            name: 'Unit two',
+            data: mydata["unit2_2"],
+            yAxis: 1,
+            type: 'column',
+            color: 'green',
+            tooltip: {
+                valueDecimals: 2,
+                valueSuffix: ' m'
+            }
+        }]
     });
 }
 
@@ -175,4 +174,40 @@ function fakedata(query) {
 $(function() {
     $("#table-wrapper").hide();
     search();
+
+    var LightTableFilter = (function(Arr) {
+
+        var _input;
+
+        function _onInputEvent(e) {
+            _input = e.target;
+            var tables = document.getElementsByClassName(_input.getAttribute('data-table'));
+            Arr.forEach.call(tables, function(table) {
+                Arr.forEach.call(table.tBodies, function(tbody) {
+                    Arr.forEach.call(tbody.rows, _filter);
+                });
+            });
+        }
+
+        function _filter(row) {
+            var text = row.textContent.toLowerCase(),
+                val = _input.value.toLowerCase();
+            row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+        }
+
+        return {
+            init: function() {
+                var inputs = document.getElementsByClassName('light-table-filter');
+                Arr.forEach.call(inputs, function(input) {
+                    input.oninput = _onInputEvent;
+                });
+            }
+        };
+    })(Array.prototype);
+
+    document.addEventListener('readystatechange', function() {
+        if (document.readyState === 'complete') {
+            LightTableFilter.init();
+        }
+    });
 });

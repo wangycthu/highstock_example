@@ -61,13 +61,46 @@
           <!-- Hight Charts Begin-->
           <div id="high-chart"></div>
           <!-- Hight Charts End-->
+
+          <h3 class="sub-header">Light Table Filter</h2>
+          <input type="search" class="light-table-filter" data-table="order-table" placeholder="Filter">
+          <table class="order-table table table-striped">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John Doe</td>
+                <td>john.doe@gmail.com</td>
+                <td>0123456789</td>
+                <td>99</td>
+              </tr>
+              <tr>
+                <td>Jane Vanda</td>
+                <td>jane@vanda.org</td>
+                <td>9876543210</td>
+                <td>349</td>
+              </tr>
+              <tr>
+                <td>Alferd Penyworth</td>
+                <td>alfred@batman.com</td>
+                <td>6754328901</td>
+                <td>199</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <div class="col-md-1"></div>
       </div>
       <br>
     </div>
     <!-- Bootstrap core JavaScript Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/highstock/js/highstock.js"></script>
     <script src="bower_components/highstock/js/modules/exporting.js"></script>
