@@ -1,0 +1,16 @@
+label.clickable:hover {
+	text-decoration: underline;
+}
+
+label {
+	font-weight: 300;
+}
+
+label.checked {
+	font-weight: 700;
+}
+
+table td {
+	border-bottom: 1px solid;
+	background-color: aliceblue;
+}

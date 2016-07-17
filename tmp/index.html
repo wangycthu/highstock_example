@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta author="Yichen Wang">
+	<title>Simple Chart</title>
+
+	<script src="jquery/dist/jquery.min.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="select2/dist/js/select2.js"></script>
+	<script src="js/index.js"></script>
+
+	<!-- Bootstrap css -->
+	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="select2/dist/css/select2.min.css">
+	<!-- Custom style -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-10 main">
+				<h1 class="page-header">Demo</h1>
+				<p>This is an awesome tool.</p>
+				<br>
+				<table class="table">
+					<tr>
+						<td><label class="clickable">ABC</label></td>
+						<td>1200</td>
+						<td><label class="clickable">ABC</label></td>
+						<td>1200</td>
+						<td><label class="clickable">ABC</label></td>
+						<td>1200</td>
+					</tr>
+					<tr>
+						<td><label class="clickable">ABC</label></td>
+						<td>1200</td>
+						<td><label class="clickable">ABC</label></td>
+						<td>1200</td>
+						<td><label class="clickable">ABC</label></td>
+						<td>1200</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4">
+                <select id="single-query">
+                	<option></option>
+               	</select>
+	        </div>
+	        <div class="col-lg-6">
+	        	<select id="multi-query" style="width: 400px">
+	        	</select>
+	        </div>
+		</div>
+	</div>
+</body>
+</html>
